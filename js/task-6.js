@@ -1,5 +1,4 @@
 let total = 0;
-
 while (true) {
   let input = prompt("Введите число");
 
@@ -8,7 +7,6 @@ while (true) {
   }
 
   input = Number(input);
-
   const notNumber = Number.isNaN(input);
 
   if (notNumber) {

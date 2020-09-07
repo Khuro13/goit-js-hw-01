@@ -1,4 +1,5 @@
 let userCountry = prompt("Введите страну").toLowerCase();
+
 if (userCountry === null) {
   alert("Отмена ввода!");
 }
