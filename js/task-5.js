@@ -5,7 +5,7 @@ if (userCountry === null) {
 
 const China = "Китай";
 const Chile = "Чили";
-const Australia = "Австрия";
+const Australia = "Австрaлия";
 const India = "Индия";
 const Jamaica = "Ямайка";
 
