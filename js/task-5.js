@@ -1,32 +1,47 @@
-let userCountry = prompt("Введите страну").toLowerCase();
+const china = 'CHINA';
+const chili = 'CHILI';
+const australia = 'AUSTRALIA';
+const india = 'INDIA';
+const jamaika = 'JAMAIKA';
+const userChoise = prompt('В какую страну доставить товар?');
 
-if (userCountry === null) {
-  alert("Отмена ввода!");
+let cost;
+let message;
+
+if (userChoise === null) {
+  message = 'Отменено пользователем!';
+} else {
+  // userChoise[0].toUpperCase() + userChoise.slice(1).toLowerCase();
+
+  switch (userChoise.toUpperCase()) {
+    case 'CHINA':
+      cost = 100;
+      break;
+
+    case 'CHILI':
+      cost = 250;
+      break;
+
+    case 'AUSTRALIA':
+      cost = 170;
+      break;
+
+    case 'INDIA':
+      cost = 80;
+      break;
+
+    case 'JAMAIKA':
+      cost = 120;
+      break;
+
+    default:
+      message = 'В вашей стране доставка не доступна';
+      break;
+  }
 }
 
-const China = "Китай";
-const Chile = "Чили";
-const Australia = "Австрaлия";
-const India = "Индия";
-const Jamaica = "Ямайка";
-
-switch (userCountry) {
-  case China:
-    console.log(`Доставка в ${China} будет стоить 100 кредитов`);
-    break;
-  case Chile:
-    console.log(`Доставка в ${Chile} будет стоить 250 кредитов`);
-    break;
-  case Australia:
-    console.log(`Доставка в ${Australia} будет стоить 170 кредитов`);
-    break;
-  case India:
-    console.log(`Доставка в ${India} будет стоить 80 кредитов`);
-    break;
-  case Jamaica:
-    console.log(`Доставка в ${Jamaica} будет стоить 50 кредитов`);
-    break;
-
-  default:
-    alert("В вашей стране доставка не доступна");
+if (cost > 0) {
+  message = `Доставка в ${userChoise.toUpperCase()} будет стоить ${cost} кредитов`;
 }
+
+alert(message);

@@ -1,11 +1,18 @@
-const ADMIN_PASSWORD = "jqueryismyjam";
+const ADMIN_PASSWORD = 'jqueryismyjam';
+const userChoise = prompt('Пожалуйста введите пароль!');
 let message;
-message = prompt("Введите пожалуйста кодовое слово!");
 
-if (message === ADMIN_PASSWORD) {
-  console.log("Добро пожаловать");
-} else if (message) {
-  console.log("Вход запрещен, неверный пароль!");
+if (userChoise === null) {
+  message = 'Отменено пользователем!';
 } else {
-  console.log("Отменено пользователем");
+  switch (userChoise) {
+    case ADMIN_PASSWORD:
+      message = 'Добро пожаловать!';
+      break;
+
+    default:
+      message = 'Доступ запрещен, неверный пароль!';
+      break;
+  }
 }
+alert(message);
