@@ -3,6 +3,7 @@ const chili = 'CHILI';
 const australia = 'AUSTRALIA';
 const india = 'INDIA';
 const jamaika = 'JAMAIKA';
+
 const userChoise = prompt('В какую страну доставить товар?');
 
 let cost;
